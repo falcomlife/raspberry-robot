@@ -13,6 +13,7 @@ action = ""
 class Car:
     def __init__(self):
         GPIO.setmode(GPIO.BOARD)
+        GPIO.setwarnings(False)
         GPIO.setup(leftFront1, GPIO.OUT)
         GPIO.setup(leftFront2, GPIO.OUT)
         GPIO.setup(rightFront1, GPIO.OUT)
