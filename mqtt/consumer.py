@@ -21,9 +21,9 @@ class Consumer:
         if "backward" == j['action']:
             d.backward(d)
         if "leftward" == j['action']:
-            d.leftward(d)
+            d.left(d)
         if "rightward" == j['action']:
-            d.rightward(d)
+            d.right(d)
         if "stop" == j['action']:
             d.stop(d)
 
