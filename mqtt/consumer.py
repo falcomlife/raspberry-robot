@@ -1,5 +1,5 @@
 import paho.mqtt.client as mqtt
-from action import demo
+from action import car
 import json
 
 
@@ -11,9 +11,9 @@ class Consumer:
 
     def on_message(client, userdata, msg):
 
-        d = demo.Demo
+        d = car.Car
         body = msg.payload.decode()
-        topic = msg.topic
+        topic = msg.topic   
         print(topic + ":" + body)
         j = json.loads(body)
         if "forward" == j['action']:

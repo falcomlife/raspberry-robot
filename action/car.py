@@ -23,6 +23,7 @@ class Car:
         GPIO.setup(rightBack2, GPIO.OUT)
 
     def forward(self):
+        print("forward")
         GPIO.output(leftFront1, GPIO.HIGH)
         GPIO.output(leftFront2, GPIO.LOW)
         GPIO.output(rightFront1, GPIO.HIGH)
@@ -33,6 +34,7 @@ class Car:
         GPIO.output(rightBack2, GPIO.LOW)
 
     def backward(self):
+        print("backward")
         GPIO.output(leftFront1, GPIO.LOW)
         GPIO.output(leftFront2, GPIO.HIGH)
         GPIO.output(rightFront1, GPIO.LOW)
@@ -43,6 +45,7 @@ class Car:
         GPIO.output(rightBack2, GPIO.HIGH)
 
     def left(self):
+        print("left")
         GPIO.output(leftFront1, GPIO.LOW)
         GPIO.output(leftFront2, GPIO.HIGH)
         GPIO.output(rightFront1, GPIO.HIGH)
@@ -53,6 +56,7 @@ class Car:
         GPIO.output(rightBack2, GPIO.LOW)
 
     def right(self):
+        print("right")
         GPIO.output(leftFront1, GPIO.HIGH)
         GPIO.output(leftFront2, GPIO.LOW)
         GPIO.output(rightFront1, GPIO.LOW)
@@ -63,6 +67,7 @@ class Car:
         GPIO.output(rightBack2, GPIO.HIGH)
 
     def stop(self):
+        print("stop")
         GPIO.output(leftFront1, GPIO.LOW)
         GPIO.output(leftFront2, GPIO.LOW)
         GPIO.output(rightFront1, GPIO.LOW)
