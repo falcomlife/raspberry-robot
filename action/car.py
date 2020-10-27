@@ -1,3 +1,5 @@
+import atexit
+
 import RPi.GPIO as GPIO
 
 leftFront1 = 11
@@ -8,8 +10,15 @@ leftBack1 = 16
 leftBack2 = 18
 rightBack1 = 22
 rightBack2 = 7
-
+channels = [leftFront1,leftFront2,rightFront1,rightFront2,leftBack1,leftBack2,rightBack1,rightBack2]
 action = ""
+
+
+@atexit.register
+def final():
+    print('final')
+    GPIO.cleanup(channels)
+
 class Car:
     def __init__(self):
         GPIO.setmode(GPIO.BOARD)

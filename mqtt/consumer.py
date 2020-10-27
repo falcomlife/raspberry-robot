@@ -1,3 +1,5 @@
+import atexit
+
 import paho.mqtt.client as mqtt
 from action import car
 import json
