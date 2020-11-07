@@ -15,7 +15,7 @@ class Consumer:
 
         d = car.Car
         body = msg.payload.decode()
-        topic = msg.topic   
+        topic = msg.topic
         print(topic + ":" + body)
         j = json.loads(body)
         if "forward" == j['action']:
@@ -26,6 +26,10 @@ class Consumer:
             d.left(d)
         if "right" == j['action']:
             d.right(d)
+        if "clockwise" == j['action']:
+            d.clockwise(d)
+        if "anticlockwise" == j['action']:
+            d.anticlockwise(d)
         if "stop" == j['action']:
             d.stop(d)
 

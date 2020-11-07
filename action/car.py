@@ -87,4 +87,26 @@ class Car:
         GPIO.output(rightBack1, GPIO.LOW)
         GPIO.output(rightBack2, GPIO.LOW)
 
+    def clockwise(self):
+        print("clockwise")
+        GPIO.output(leftFront1, GPIO.HIGH)
+        GPIO.output(leftFront2, GPIO.LOW)
+        GPIO.output(rightFront1, GPIO.HIGH)
+        GPIO.output(rightFront2, GPIO.LOW)
+        GPIO.output(leftBack1, GPIO.LOW)
+        GPIO.output(leftBack2, GPIO.HIGH)
+        GPIO.output(rightBack1, GPIO.LOW)
+        GPIO.output(rightBack2, GPIO.HIGH)
+
+    def anticlockwise(self):
+        print("anticlockwise")
+        GPIO.output(leftFront1, GPIO.LOW)
+        GPIO.output(leftFront2, GPIO.HIGH)
+        GPIO.output(rightFront1, GPIO.LOW)
+        GPIO.output(rightFront2, GPIO.HIGH)
+        GPIO.output(leftBack1, GPIO.HIGH)
+        GPIO.output(leftBack2, GPIO.LOW)
+        GPIO.output(rightBack1, GPIO.HIGH)
+        GPIO.output(rightBack2, GPIO.LOW)
+
 car=Car()
